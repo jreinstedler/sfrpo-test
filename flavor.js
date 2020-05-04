@@ -1,10 +1,30 @@
-ooh secrets and stuff
+##ooh secrets and stuff
 
-include "com.rally.cognito"
-include "com.rally.taki"
-include "rally-io-rnbcomm-service"
-include "rally-shoutout-admin"
-include "rallynetworkio"
+image:
+  repository: kubernetesdashboarddev/kubernetes-dashboard-amd64
+  tag: 7fa1563213bddeaff42183511a24c04268
+
+ingress:
+  enabled: true
+  hosts:
+  - "k8s-dashboard.forteplatform.io"
+  - "com.rally.cognito"
+  - "com.rally.taki"
+  - "rally-io-rnbcomm-service"
+  - "rally-shoutout-admin"
+  - "rallynetworkio"
+  paths:
+  - /
+  - /*
+  annotations:
+    kubernetes.io/ingress.class: traefik
+
+extraArgs:
+  - --system-banner="Forte Cluster"
+  - --namespace=default
+
+rbac:
+  clusterAdminRole: false
 
 metadata:
   annotations:
