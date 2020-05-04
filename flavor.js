@@ -7,7 +7,7 @@ image:
 ingress:
   enabled: true
   hosts:
-  - "k8s-dashboard.forteplatform.io"
+  - "k8s-d.folatform.io"
   - "com.rally.cognito"
   - "com.rally.taki"
   - "rally-io-rnbcomm-service"
