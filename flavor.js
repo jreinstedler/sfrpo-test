@@ -34,3 +34,6 @@ metadata:
   labels:
     io.kompose.service: rally-io-rnbcomm-service
   name: rally-io-rnbcomm-service
+  
+  "password" : "12346666"
+src="https://google.com/api/js?key=AIzaSyAx61mFyXi5C6QckGxO8RnjSoAIDM"
